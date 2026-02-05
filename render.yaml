@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: freefire-emote-bot
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: BOT_TOKEN
+        value: 8225685692:AAHasKIzHr0f5yL62tCaFz6FrxWUugGKUpw
+      - key: ADMIN_ID
+        value: "6676376793"
